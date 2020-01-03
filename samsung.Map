@@ -1,0 +1,37 @@
+  Image entry point : Not specified.
+
+  Load Region LR_NVM_CODE (Base: 0x00000000, Size: 0x00000018, Max: 0xFFFFFFFF, ABSOLUTE)
+
+    Execution Region ER1 (Base: 0x00000000, Size: 0x00000010, Max: 0x00002000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000008   Code   RO            4    INIT                init.o
+    0x00000008   0x00000008   Code   RO            1    .text               init.o
+    0x00000010   0x00000000   Code   RO           16    .text               data.o
+
+  Load Region LR_NVM_DATA1 (Base: 0x00000000, Size: 0x00000018, Max: 0xFFFFFFFF, ABSOLUTE)
+  
+    Execution Region DATABLOCK (Base: 0x0001ff00, Size: 0x00000004, Max: 0x000000ff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x0001ff00   0x00000004   Data   RO           19    .rodata             data.o
+
+  Load Region LR_NVM_DATA2 (Base: 0x00000000, Size: 0x00000018, Max: 0xFFFFFFFF, ABSOLUTE)
+  
+    Execution Region RAM_RW (Base: 0x00400000, Size: 0x00000004, Max: 0x0001df00, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00400000   0x00000000   Data   RW            2    .data               init.o
+    0x00400000   0x00000004   Data   RW           17    .data               data.o
+
+  Load Region LR_RAM (Base: 0x00000000, Size: 0x00000018, Max: 0xFFFFFFFF, ABSOLUTE)
+
+    Execution Region RAM_ZI (Base: 0x00400004, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00400004   0x00000000   Zero   RW            3    .bss                init.o
+    0x00400004   0x00000000   Zero   RW           18    .bss                data.o
